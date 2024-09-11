@@ -1,27 +1,13 @@
-# 🚀 Express TypeScript Boilerplate 2024
+# 🚀 Taskify Server
 
-[![Build](https://github.com/edwinhern/express-typescript-2024/actions/workflows/build.yml/badge.svg)](https://github.com/edwinhern/express-typescript-2024/actions/workflows/build.yml)
-[![Test](https://github.com/edwinhern/express-typescript-2024/actions/workflows/test.yml/badge.svg)](https://github.com/edwinhern/express-typescript-2024/actions/workflows/test.yml)
-[![Code Quality](https://github.com/edwinhern/express-typescript-2024/actions/workflows/code-quality.yml/badge.svg)](https://github.com/edwinhern/express-typescript-2024/actions/workflows/code-quality.yml)
-[![Docker Image CI](https://github.com/edwinhern/express-typescript-2024/actions/workflows/docker-image.yml/badge.svg)](https://github.com/edwinhern/express-typescript-2024/actions/workflows/docker-image.yml)
-
-``` code
-Hey There! 🙌 
-🤾 that ⭐️ button if you like this boilerplate. 
-```
+[![Build](https://github.com/devnadeemashraf/taskify-server/actions/workflows/build.yml/badge.svg)](https://github.com/devnadeemashraf/taskify-server/actions/workflows/build.yml)
+[![Test](https://github.com/devnadeemashraf/taskify-server/actions/workflows/test.yml/badge.svg)](https://github.com/devnadeemashraf/taskify-server/actions/workflows/test.yml)
+[![Code Quality](https://github.com/devnadeemashraf/taskify-server/actions/workflows/code-quality.yml/badge.svg)](https://github.com/devnadeemashraf/taskify-server/actions/workflows/code-quality.yml)
+[![Docker Image CI](https://github.com/devnadeemashraf/taskify-server/actions/workflows/docker-image.yml/badge.svg)](https://github.com/devnadeemashraf/taskify-server/actions/workflows/docker-image.yml)
 
 ## 🌟 Introduction
 
-Welcome to the Express TypeScript Boilerplate 2024 – a streamlined, efficient, and scalable foundation for building powerful backend services with modern tools and practices in Express.js and TypeScript.
-
-## 💡 Motivation
-
-This boilerplate aims to:
-
-- ✨ Reduce setup time for new projects
-- 📊 Ensure code consistency and quality
-- ⚡  Facilitate rapid development
-- 🛡️ Encourage best practices in security, testing, and performance
+This is "Taskify" – a streamlined, efficient, scalable and powerful backend services with modern tools and practices in Express and TypeScript.
 
 ## 🚀 Features
 
@@ -43,16 +29,12 @@ This boilerplate aims to:
 
 ## 🛠️ Getting Started
 
-### Video Demo
-
-For a visual guide, watch the [video demo](https://github.com/user-attachments/assets/b1698dac-d582-45a0-8d61-31131732b74e) to see the setup and running of the project.
-
 ### Step-by-Step Guide
 
 #### Step 1: 🚀 Initial Setup
 
-- Clone the repository: `git clone https://github.com/edwinhern/express-typescript-2024.git`
-- Navigate: `cd express-typescript-2024`
+- Clone the repository: `git clone https://github.com/devnadeemashraf/taskify-server.git`
+- Navigate: `cd taskify-server`
 - Install dependencies: `npm ci`
 
 #### Step 2: ⚙️ Environment Configuration
