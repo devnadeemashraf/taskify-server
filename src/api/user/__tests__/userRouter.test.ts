@@ -1,4 +1,5 @@
 import { StatusCodes } from "http-status-codes";
+import mongoose from "mongoose";
 import request from "supertest";
 
 import type { User } from "@/api/user/userModel";
@@ -25,8 +26,8 @@ describe("User API Endpoints", () => {
   describe("GET /users/:id", () => {
     it("should return a user for a valid ID", async () => {
       // Arrange
-      const testId = 1;
-      const expectedUser = users.find((user) => user.id === testId) as User;
+      const testId = "65005e589f1a5b4d04880f71"; // Use toString() to match MongoDB string comparison
+      const expectedUser = users.find((user) => user._id.toString() === testId) as User;
 
       // Act
       const response = await request(app).get(`/users/${testId}`);
@@ -42,7 +43,7 @@ describe("User API Endpoints", () => {
 
     it("should return a not found error for non-existent ID", async () => {
       // Arrange
-      const testId = Number.MAX_SAFE_INTEGER;
+      const testId = "65005e589f1a5b4d04880f73";
 
       // Act
       const response = await request(app).get(`/users/${testId}`);
@@ -75,10 +76,10 @@ function compareUsers(mockUser: User, responseUser: User) {
     throw new Error("Invalid test data: mockUser or responseUser is undefined");
   }
 
-  expect(responseUser.id).toEqual(mockUser.id);
+  expect(responseUser._id.toString()).toEqual(mockUser._id.toString()); // Ensure ObjectId is compared correctly
   expect(responseUser.name).toEqual(mockUser.name);
   expect(responseUser.email).toEqual(mockUser.email);
-  expect(responseUser.age).toEqual(mockUser.age);
+  expect(responseUser.passwordHash).toEqual(mockUser.passwordHash);
   expect(new Date(responseUser.createdAt)).toEqual(mockUser.createdAt);
   expect(new Date(responseUser.updatedAt)).toEqual(mockUser.updatedAt);
 }

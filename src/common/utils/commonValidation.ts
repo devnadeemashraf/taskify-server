@@ -1,10 +1,13 @@
+import mongoose from "mongoose";
 import { z } from "zod";
 
+// MongoDB Object ID Validation
+const objectIdValidation = z
+  .string()
+  .refine((data) => mongoose.isValidObjectId(data), "Invalid id [ObjectID expected]");
+
+// Common Validations for Inputs
 export const commonValidations = {
-  id: z
-    .string()
-    .refine((data) => !Number.isNaN(Number(data)), "ID must be a numeric value")
-    .transform(Number)
-    .refine((num) => num > 0, "ID must be a positive number"),
+  id: objectIdValidation,
   // ... other common validations
 };
